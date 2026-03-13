@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taxi Prototype</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1>Taxi Mobile Prototype</h1>
+      </header>
+
+      <nav class="tabs" aria-label="Mode selector">
+        <button class="tab is-active" data-screen="rider">Rider</button>
+        <button class="tab" data-screen="driver">Driver</button>
+      </nav>
+
+      <section id="rider-screen" class="screen is-active" aria-label="Rider screen">
+        <div id="map" aria-label="Map"></div>
+        <p id="location-status">Locating you...</p>
+        <button id="request-ride" class="request-btn">Request Ride</button>
+      </section>
+
+      <section id="driver-screen" class="screen" aria-label="Driver screen">
+        <h2>Incoming ride requests</h2>
+        <ul id="ride-requests" class="requests-list"></ul>
+      </section>
+    </main>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
